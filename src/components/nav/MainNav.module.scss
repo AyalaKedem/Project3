@@ -1,0 +1,21 @@
+@import '../../themed-bootstrap.scss';
+
+.nav a {
+  color: #fff;
+  font-family: $fontAssistant;
+  font-size: 18px;
+  font-weight: 300;
+  &:hover {
+    color: $orange;
+  }
+}
+
+.active {
+  // ?לא עובד weight -למה ה
+  font-weight: 500 !important;
+  color: $orange !important;
+}
+
+.unActive {
+  text-decoration: none;
+}

@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap");
+
+$fontOpenSana: "Open Sans", sans-serif;
+$fontAssistant: "Assistant", sans-serif;
+
+$radius: 5px;
+
+$orange: #e1941e;
+$broun: #3e2e15;
+
+body {
+  direction: rtl;
+}
+
+h2, h4 {
+  font-family: $fontAssistant;
+  font-weight: 400 !important;
+}
+
+h3 {
+  font-family: $fontAssistant;
+  font-weight: 700 !important;
+}
+
+h5 {
+  font-family: $fontAssistant;
+}
+
+p {
+  font-size: 19px;
+  font-family: $fontOpenSana;
+}
+
+@import "~bootstrap/scss/bootstrap.scss";

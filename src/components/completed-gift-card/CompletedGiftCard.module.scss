@@ -1,0 +1,32 @@
+@import '../../themed-bootstrap.scss';
+
+.grid {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 12;
+}
+
+.penGrid {
+    display: grid;
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 11;
+    grid-row-end: 12;
+}
+
+.blk {
+    cursor: pointer;
+    color: $orange;
+    background-color: #fff;
+    font-size: 34px;
+    padding: 5px;
+    margin: 12px;
+    border-radius: 50%;
+    // text-shadow: .3px .3px 5px #000;
+    &:hover {
+        color: #fff;
+        background-color: $orange;
+    }
+}

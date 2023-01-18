@@ -1,0 +1,29 @@
+@import "../../themed-bootstrap.scss";
+
+.btn {
+  background-color: $orange;
+}
+
+.orange {
+  background-color: $orange;
+  border-radius: $radius;
+  color: #fff;
+  font-size: 35px;
+//   text-shadow: .3px .3px 8px rgba(0, 0, 0, 0.391);
+}
+
+.x {
+  font-size: 22px;
+}
+
+.textArea {
+  resize: none;
+}
+
+.width {
+    width: 40%;
+}
+
+.sumWidth {
+  width: 50px;
+}

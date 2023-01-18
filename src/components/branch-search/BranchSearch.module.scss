@@ -1,0 +1,11 @@
+@import '../../themed-bootstrap.scss';
+.btn {
+    background-color: $orange;
+}
+
+.btn, .input {
+    border-radius: $radius;
+    height: 60px;
+    font-family: $fontOpenSana;
+    font-size: 20px;
+}

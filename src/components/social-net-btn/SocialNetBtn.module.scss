@@ -1,0 +1,9 @@
+@import '../../themed-bootstrap.scss';
+
+.btn {
+  color: #fff;
+  font-size: 22px;
+  &:hover {
+    color: $orange;
+  }
+}
