@@ -32,9 +32,9 @@ const EditCard = () => {
   const card = cardsArr.find((c) => c.id === id);
 
   const [sum, setSum] = useState(card?.sum ?? Number);
-  const [to, setTo] = useState(card?.to ?? '');
-  const [congrat, setCongrat] = useState(card?.congrat ?? '');
-  const [from, setFrom] = useState(card?.from ?? '');
+  const [to, setTo] = useState(card?.to ?? "");
+  const [congrat, setCongrat] = useState(card?.congrat ?? "");
+  const [from, setFrom] = useState(card?.from ?? "");
 
   if (card === undefined) {
     // לשנות לדף 404 אם יש זמן
