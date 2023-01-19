@@ -92,14 +92,14 @@ const GiftCard = () => {
         <button
           className={`${css.btn} d-flex mx-auto mt-5 w-25 align-items-center justify-content-center p-2`}
           onClick={() => {
-            const GiftCard: GiftCardType = {
+            const giftCard: GiftCardType = {
               id: v4(),
               sum: sum,
               congrat: congrat,
               from: from,
               to: to,
             };
-            dispatch(card(GiftCard));
+            dispatch(card(giftCard));
             closeModal();
           }}
         >

@@ -14,14 +14,14 @@ import EditCard from "./components/edit-card/EditCard";
 
 
 function App() {
-  const giftCardArr = useAppSelector(state => state.giftCard.giftCard);
-  const giftCard = giftCardArr
+  // const giftCardArr = useAppSelector(state => state.giftCard.giftCard);
+  // const giftCard = giftCardArr[0]
    
   return (
     <div className="App">
       <MainNav />
       <GiftCard/>
-      <CompletedGiftCard key={giftCard.id} {...giftCard}/>
+      <CompletedGiftCard />
       <Routes>
         <Route path="/" element={<Menu />} />
         <Route path="/menu" element={<Menu />} />

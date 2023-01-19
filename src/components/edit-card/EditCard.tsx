@@ -5,7 +5,6 @@ import css from "../gift-card/GiftCard.module.scss";
 import Modal from "react-modal";
 import giftImg from "../../img/ekaterina-shevchenko-ZLTlHeKbh04-unsplash.jpg";
 import { GiftCard } from "../../@types";
-import { v4 } from "uuid";
 import { editCard } from "../../features/gift-card/giftCardSlice";
 
 const customStyles = {
@@ -24,7 +23,6 @@ Modal.setAppElement("#root");
 
 const EditCard = () => {
   const navigate = useNavigate();
-
   const dispatch = useAppDispatch();
 
   const modalIsOpen = true;
@@ -33,10 +31,10 @@ const EditCard = () => {
   const cardsArr = useAppSelector((state) => state.giftCard.giftCard);
   const card = cardsArr.find((c) => c.id === id);
 
-  const [sum, setSum] = useState(card?.sum);
-  const [to, setTo] = useState(card?.to);
-  const [congrat, setCongrat] = useState(card?.congrat);
-  const [from, setFrom] = useState(card?.from);
+  const [sum, setSum] = useState(card?.sum ?? Number);
+  const [to, setTo] = useState(card?.to ?? '');
+  const [congrat, setCongrat] = useState(card?.congrat ?? '');
+  const [from, setFrom] = useState(card?.from ?? '');
 
   if (card === undefined) {
     // לשנות לדף 404 אם יש זמן
@@ -52,28 +50,12 @@ const EditCard = () => {
             <form className="d-flex flex-column p-1 gap-4">
               <div className="d-flex align-items-center gap-2">
                 <label htmlFor="sum">גיפט קארד</label>
-                <input
-                  required
-                  className={css.sumWidth}
-                  type="number"
-                  min={0}
-                  name="sum"
-                  value={sum}
-                  onChange={(e) => setSum(+e.currentTarget.value)}
-                />
+                <input required className={css.sumWidth} type="number" min={0} name="sum" value={sum} onChange={(e) => setSum(+e.currentTarget.value)} />
                 <span>₪</span>
               </div>
               <div className="d-flex align-items-center gap-2">
                 <label htmlFor="to">ל: </label>
-                <input
-                  required
-                  value={to}
-                  className="pe-1 w-100"
-                  type="text"
-                  name="to"
-                  placeholder="שם מקבל/ת המתנה"
-                  onChange={(e) => setTo(e.currentTarget.value)}
-                />
+                <input required value={to} className="pe-1 w-100" type="text" name="to" placeholder="שם מקבל/ת המתנה" onChange={(e) => setTo(e.currentTarget.value)} />
               </div>
               <div className="d-flex flex-column gap-1">
                 <label htmlFor="congratulation">ברכה:</label>
@@ -101,7 +83,7 @@ const EditCard = () => {
           className={`${css.btn} d-flex mx-auto mt-5 w-25 align-items-center justify-content-center p-2`}
           onClick={() => {
             const editedCard: GiftCard = {
-              id: v4(),
+              id: id!,
               sum: sum,
               congrat: congrat,
               from: from,

@@ -17,7 +17,7 @@ export const giftCardSlice = createSlice({
       state.giftCard.push(payload)
     },
     editCard: (state, { payload }: PayloadAction<GiftCard>) => {
-      const index = state.giftCard.findIndex(c => c.id = payload.id);
+      const index = state.giftCard.findIndex(c => c.id === payload.id);
       state.giftCard[index] = payload;
     },
   },
