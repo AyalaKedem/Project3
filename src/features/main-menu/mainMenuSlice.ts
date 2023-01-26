@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { MainMenuProp } from "../../@types";
 
+// להעביר אותו לטייפים בסןף ולייבא כאן
 type initialStateMain = {
   mainMenu: MainMenuProp;
 };

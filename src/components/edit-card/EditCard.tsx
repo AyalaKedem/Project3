@@ -89,7 +89,6 @@ const EditCard = () => {
               from: from,
               to: to,
             };
-            console.log(editedCard);
             dispatch(editCard(editedCard));
             navigate(-1);
           }}

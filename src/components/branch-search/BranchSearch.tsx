@@ -18,7 +18,6 @@ const BranchSearch = () => {
   const onClick = () => {
     let branches = branchesArr.filter((b) => b.city.startsWith(address));
     setBranch(branches);
-    console.log(branches);
   };
 
   return (

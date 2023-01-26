@@ -10,17 +10,21 @@ padding-top: 4px;
 padding-left: 8px;
 }
 
+.orangeColor {
+    color: $orange;
+}
+
 .green {
     color: rgb(138, 226, 5);
 }
 
-.ordered1 {
-    // background-color: $orange;
+.ordered {
+    background-color: $orange;
     padding-top: 4px;
     padding-left: 8px;
-    color:#e1931e80
+    color: #000;
 }
 
-.ordered2 {
-    color: rgba(255, 255, 255, 0.5);
-}
+.x {
+    font-size: 22px;
+  }

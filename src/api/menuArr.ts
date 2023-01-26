@@ -11,6 +11,7 @@ export const menuArr: CategoryItem[] = [
     price: 62,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -21,16 +22,17 @@ export const menuArr: CategoryItem[] = [
     price: 115,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
     category: "breakfast",
     name: "בוקר צרפתי",
-    description:
-      "טוסט בחמאת שום שמיר, תערובת גבינות, רוטב שמנת ירוקים וביצי עין מעל, מוגש עם סלט אישי,זיתי הבית ושתייה קלה / חמה לבחירה.תוספת סלמון מעושן.",
+    description: "טוסט בחמאת שום שמיר, תערובת גבינות, רוטב שמנת ירוקים וביצי עין מעל, מוגש עם סלט אישי,זיתי הבית ושתייה קלה / חמה לבחירה.תוספת סלמון מעושן.",
     price: 62,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -41,26 +43,27 @@ export const menuArr: CategoryItem[] = [
     price: 56,
     vegan: true,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
     category: "breakfast",
     name: "שקשוקת הבית",
-    description:
-      "תבשיל עגבניות פיקנטי, פלפלים אדומים, בצל ושום, מוגש במחבת לוהטת עם שתי ביצי משק, לצד סלט אישי, חלה מתוקה, טחינה וזיתי הבית. תוספות לשקשוקה: פטה / פלפל קלוי / חצילים / זיתי קלמטה / פסטו / פטריות / פלפל חריף / מוצרלה / בולגרית.",
+    description: "תבשיל עגבניות פיקנטי, פלפלים אדומים, בצל ושום, מוגש במחבת לוהטת עם שתי ביצי משק, לצד סלט אישי, חלה מתוקה, טחינה וזיתי הבית. תוספות לשקשוקה: פטה / פלפל קלוי / חצילים / זיתי קלמטה / פסטו / פטריות / פלפל חריף / מוצרלה / בולגרית.",
     price: 56,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
     category: "breakfast",
     name: "שקשוקה טבעונית ",
-    description:
-      "תבשיל עגבניות פיקנטי, פלפלים אדומים, בצלושום, מוגש במחבת לוהטת עם קוביות טופו וצהובה טבעונית, מוגש לצד סלט אישי, חלה מתוקה, טחינה וזיתי הבית.",
+    description: "תבשיל עגבניות פיקנטי, פלפלים אדומים, בצלושום, מוגש במחבת לוהטת עם קוביות טופו וצהובה טבעונית, מוגש לצד סלט אישי, חלה מתוקה, טחינה וזיתי הבית.",
     price: 56,
     vegan: true,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -70,6 +73,7 @@ export const menuArr: CategoryItem[] = [
     price: 28,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -79,6 +83,7 @@ export const menuArr: CategoryItem[] = [
     price: 32,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -88,6 +93,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: true,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -97,6 +103,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: true,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -106,6 +113,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -115,6 +123,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -124,6 +133,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -133,6 +143,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -142,6 +153,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -151,6 +163,7 @@ export const menuArr: CategoryItem[] = [
     price: 28,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -160,6 +173,7 @@ export const menuArr: CategoryItem[] = [
     price: 28,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -169,6 +183,7 @@ export const menuArr: CategoryItem[] = [
     price: 28,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -178,6 +193,7 @@ export const menuArr: CategoryItem[] = [
     price: 28,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -187,6 +203,7 @@ export const menuArr: CategoryItem[] = [
     price: 28,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -196,6 +213,7 @@ export const menuArr: CategoryItem[] = [
     price: 28,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -205,6 +223,7 @@ export const menuArr: CategoryItem[] = [
     price: 28,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -214,56 +233,57 @@ export const menuArr: CategoryItem[] = [
     price: 56,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
     category: "salads",
     name: "סלט טונה",
-    description:
-      "סלט טונה במיונז, ביצה קשה, תפוח אדמה קריספי ואיולי קיסר, מלפפון חמוץ, שעועית ירוקה, בצל סגול, עגבניות שרי ומלפפון טרי על מצע חסה בתיבול הויניגרט שלנו.",
+    description: "סלט טונה במיונז, ביצה קשה, תפוח אדמה קריספי ואיולי קיסר, מלפפון חמוץ, שעועית ירוקה, בצל סגול, עגבניות שרי ומלפפון טרי על מצע חסה בתיבול הויניגרט שלנו.",
     price: 56,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
     category: "salads",
     name: "סלט יווני",
-    description:
-      "עגבניות, מלפפונים ובצל סגול, זיתי קלמטה, פלפלים, גזר, עלים ירוקים, בתחמיץ לימון ושמן זית, גבינה בולגרית וזעתר, מוגש על בייגל ירושלמי מהתנור. *מוגש ללא תוספת לחם.",
+    description: "עגבניות, מלפפונים ובצל סגול, זיתי קלמטה, פלפלים, גזר, עלים ירוקים, בתחמיץ לימון ושמן זית, גבינה בולגרית וזעתר, מוגש על בייגל ירושלמי מהתנור. *מוגש ללא תוספת לחם.",
     price: 56,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
     category: "salads",
     name: "טאבולה קינואה וברזל",
-    description:
-      "עדשים שחורות, קינואה, קוביות סלק, עלי סלרי, המון פטרוזיליה, בצל ירוק ונענע קצוצים דק, חמוציות, שקדים קלויים. בתיבול שמן זית לימון ובתוספת גבינת לאבנה / טחינה.",
+    description: "עדשים שחורות, קינואה, קוביות סלק, עלי סלרי, המון פטרוזיליה, בצל ירוק ונענע קצוצים דק, חמוציות, שקדים קלויים. בתיבול שמן זית לימון ובתוספת גבינת לאבנה / טחינה.",
     price: 56,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
     category: "salads",
     name: "חלומי ופטריות ממולאות",
-    description:
-      "פטריות פריכות ממולאות בתערובת גבינות, קוביות חלומי צרובות ומוקפצות עם רבעי פטריות, אגוזי מלך ברוטב טריאקי ופסטו, מונחים על תערובת חסות, עגבניות שרי, מלפפון, רצועות גזר, בצל סגול וירוק בתיבול הויניגרט שלנו.",
+    description: "פטריות פריכות ממולאות בתערובת גבינות, קוביות חלומי צרובות ומוקפצות עם רבעי פטריות, אגוזי מלך ברוטב טריאקי ופסטו, מונחים על תערובת חסות, עגבניות שרי, מלפפון, רצועות גזר, בצל סגול וירוק בתיבול הויניגרט שלנו.",
     price: 56,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
     category: "salads",
     name: "סלט הבלקן",
-    description:
-      "קוביות טוסט מבייגל שומשום עם תערובת גבינות ופסטו מוקפצות בחמאת שום, מונחות על תערובת חסות, עגבניות שרי, מלפפון, רצועות גזר, בצל סגול, זיתי קלמטה וגבינת פטה מעל, בתיבול הויניגרט שלנו.*מוגש ללא תוספת לחם.",
+    description: "קוביות טוסט מבייגל שומשום עם תערובת גבינות ופסטו מוקפצות בחמאת שום, מונחות על תערובת חסות, עגבניות שרי, מלפפון, רצועות גזר, בצל סגול, זיתי קלמטה וגבינת פטה מעל, בתיבול הויניגרט שלנו.*מוגש ללא תוספת לחם.",
     price: 56,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -273,26 +293,27 @@ export const menuArr: CategoryItem[] = [
     price: 56,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
     category: "salads",
     name: "סלט סלמון חם",
-    description:
-      "נתחי סלמון צרובים, פלפלים קלויים, שעועית ירוקה, פטריות ובצל מוקפצים, עלי רוקט טריים. מונח על חלה לוהטת בליווי רוטב קיסר. *מוגש ללא תוספת לחם.",
+    description: "נתחי סלמון צרובים, פלפלים קלויים, שעועית ירוקה, פטריות ובצל מוקפצים, עלי רוקט טריים. מונח על חלה לוהטת בליווי רוטב קיסר. *מוגש ללא תוספת לחם.",
     price: 56,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
     category: "italian",
     name: "פיצה מרגריטה",
-    description:
-      "הבצק האיטלקי שלנו, רוטב עגבניות, גבינת מוצרלה ושתי תוספות לבחירה: זיתים ירוקים / בצל / פטה / שום קונפי / ביצה קשה / פטריות / עגבנייה / פלפל חריף / פלפל קלוי / חציל קלוי. תוספת נוספת | תוספת ארטישוק. *ניתן להזמין עם גבינה טבעונית.",
+    description: "הבצק האיטלקי שלנו, רוטב עגבניות, גבינת מוצרלה ושתי תוספות לבחירה: זיתים ירוקים / בצל / פטה / שום קונפי / ביצה קשה / פטריות / עגבנייה / פלפל חריף / פלפל קלוי / חציל קלוי. תוספת נוספת | תוספת ארטישוק. *ניתן להזמין עם גבינה טבעונית.",
     price: 62,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -302,6 +323,7 @@ export const menuArr: CategoryItem[] = [
     price: 62,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -311,6 +333,7 @@ export const menuArr: CategoryItem[] = [
     price: 52,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -320,6 +343,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -329,6 +353,7 @@ export const menuArr: CategoryItem[] = [
     price: 58,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -338,6 +363,7 @@ export const menuArr: CategoryItem[] = [
     price: 58,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -347,6 +373,7 @@ export const menuArr: CategoryItem[] = [
     price: 58,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -356,6 +383,7 @@ export const menuArr: CategoryItem[] = [
     price: 78,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -365,6 +393,7 @@ export const menuArr: CategoryItem[] = [
     price: 62,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -374,6 +403,7 @@ export const menuArr: CategoryItem[] = [
     price: 62,
     vegan: false,
     vegetarian: true,
+    ordered: false,
   },
   {
     id: v4(),
@@ -383,6 +413,7 @@ export const menuArr: CategoryItem[] = [
     price: 58,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -392,6 +423,7 @@ export const menuArr: CategoryItem[] = [
     price: 58,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -401,6 +433,7 @@ export const menuArr: CategoryItem[] = [
     price: 58,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -410,6 +443,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -419,6 +453,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -428,6 +463,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -437,6 +473,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -446,6 +483,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -455,6 +493,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -464,6 +503,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: true,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -473,6 +513,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -482,6 +523,7 @@ export const menuArr: CategoryItem[] = [
     price: 48,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -491,6 +533,7 @@ export const menuArr: CategoryItem[] = [
     price: 18,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -500,6 +543,7 @@ export const menuArr: CategoryItem[] = [
     price: 18,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -509,6 +553,7 @@ export const menuArr: CategoryItem[] = [
     price: 28,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -518,6 +563,7 @@ export const menuArr: CategoryItem[] = [
     price: 18,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -527,6 +573,7 @@ export const menuArr: CategoryItem[] = [
     price: 18,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -536,6 +583,7 @@ export const menuArr: CategoryItem[] = [
     price: 18,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -545,6 +593,7 @@ export const menuArr: CategoryItem[] = [
     price: 18,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -554,6 +603,7 @@ export const menuArr: CategoryItem[] = [
     price: 28,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -563,6 +613,7 @@ export const menuArr: CategoryItem[] = [
     price: 18,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -572,6 +623,7 @@ export const menuArr: CategoryItem[] = [
     price: 18,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -581,6 +633,7 @@ export const menuArr: CategoryItem[] = [
     price: 18,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -590,6 +643,7 @@ export const menuArr: CategoryItem[] = [
     price: 18,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -599,6 +653,7 @@ export const menuArr: CategoryItem[] = [
     price: 18,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -608,6 +663,7 @@ export const menuArr: CategoryItem[] = [
     price: 18,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
   {
     id: v4(),
@@ -617,5 +673,6 @@ export const menuArr: CategoryItem[] = [
     price: 18,
     vegan: false,
     vegetarian: false,
+    ordered: false,
   },
 ];

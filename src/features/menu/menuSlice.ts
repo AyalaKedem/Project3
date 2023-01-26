@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { CategoryItem } from "../../@types";
 import { menuArr } from "../../api/menuArr";
 
@@ -15,14 +15,22 @@ export const menuSlice = createSlice({
   name: "menu",
   initialState,
   reducers: {
-    // category: (state, {payload}: PayloadAction<string>) => {
-    //   state.menuCategory.filter(c => c.category = payload);
-    // },
-    // ordered: (state, {payload}: PayloadAction<string>) => {
-    //   state.menuCategory. //לעשות כמו פייבורית 
-    // }
+    order: (state, {payload}: PayloadAction<string>) => {
+      const index = state.menuCategory.findIndex(i => i.id === payload);
+      state.menuCategory[index].ordered = true
+    },
+    toggleOrder: (state, { payload }: PayloadAction<string>) => {
+      const index = state.menuCategory.findIndex((i) => i.id === payload);
+      if (index !== -1) {
+        state.menuCategory[index].ordered = !state.menuCategory[index].ordered;
+      }
+    },
+    deleteFromOrder: (state, { payload }: PayloadAction<string>) => {
+      const index = state.menuCategory.findIndex((i) => i.id === payload);
+      state.menuCategory.splice(index, 1);
+    },
   },
 });
 
 export const menuReducer = menuSlice.reducer;
-// export const { category } = menuSlice.actions;
+export const { toggleOrder, deleteFromOrder, order } = menuSlice.actions;

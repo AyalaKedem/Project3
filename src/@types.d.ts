@@ -11,19 +11,19 @@ export type BranchProp = {
   // id: string;
 };
 
-export type BranchesProp= {
-  branches: BranchProp[]
-}
+export type BranchesProp = {
+  branches: BranchProp[];
+};
 
 type CategoryItem = {
-  id:string;
-  category: string
+  id: string;
+  category: string;
   name: string;
   description: string;
   price: number;
   vegan: boolean;
   vegetarian: boolean;
-  ordered?: boolean;
+  ordered: boolean;
 };
 
 // קשור רק למערך המקורי
@@ -48,7 +48,7 @@ export type MainMenuProp = {
 export type SocialNetArrProp = {
   icon: JSX.Element;
   link: string;
-}
+};
 
 export type GiftCard = {
   id: string;
@@ -57,3 +57,5 @@ export type GiftCard = {
   congrat: string;
   from: string;
 };
+
+export type SumProp = { prices: CategoryItem[], giftCard:GiftCard[] };

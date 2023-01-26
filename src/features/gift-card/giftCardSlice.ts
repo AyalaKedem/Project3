@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { GiftCard } from "../../@types";
 
+// להעביר אותו לטייפים בסןף ולייבא כאן
 type initialStateGift = {
   giftCard: GiftCard[];
 };
@@ -14,14 +15,18 @@ export const giftCardSlice = createSlice({
   initialState,
   reducers: {
     card: (state, { payload }: PayloadAction<GiftCard>) => {
-      state.giftCard.push(payload)
+      state.giftCard.push(payload);
     },
     editCard: (state, { payload }: PayloadAction<GiftCard>) => {
-      const index = state.giftCard.findIndex(c => c.id === payload.id);
+      const index = state.giftCard.findIndex((c) => c.id === payload.id);
       state.giftCard[index] = payload;
+    },
+    deleteCard: (state, { payload }: PayloadAction<string>) => {
+      const index = state.giftCard.findIndex((i) => i.id === payload);
+      state.giftCard.splice(index, 1);
     },
   },
 });
 
 export const giftCardReducer = giftCardSlice.reducer;
-export const { card, editCard } = giftCardSlice.actions;
+export const { deleteCard, card, editCard } = giftCardSlice.actions;
