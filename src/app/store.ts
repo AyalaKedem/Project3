@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import counterReducer from "../features/counter/counterSlice";
+import { counterReducer } from "../features/counter/counterSlice";
 import { giftCardReducer } from "../features/gift-card/giftCardSlice";
 import { mainMenuReducer } from "../features/main-menu/mainMenuSlice";
 import { menuReducer } from "../features/menu/menuSlice";
@@ -7,11 +7,11 @@ import { orderReducer } from "../features/order/orderSlice";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
     menu: menuReducer,
     mainMenu: mainMenuReducer,
     giftCard: giftCardReducer,
     orders: orderReducer,
+    counter: counterReducer,
   },
 });
 

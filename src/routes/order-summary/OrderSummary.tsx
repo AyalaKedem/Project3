@@ -6,10 +6,11 @@ import { IoIosClose } from "react-icons/io";
 import { deleteFromOrder } from "../../features/order/orderSlice";
 import Sum from "../../components/sum/Sum";
 import { v4 } from "uuid";
+import { add } from "../../features/counter/counterSlice";
 
 const OrderSummary = () => {
   const menu = useAppSelector((state) => state.orders.orders);
-  const cardPrice = useAppSelector(state => state.giftCard.giftCard)
+  const cardPrice = useAppSelector((state) => state.giftCard.giftCard);
   const dispatch = useAppDispatch();
 
   return (
@@ -24,6 +25,7 @@ const OrderSummary = () => {
                 className={`${css.x} ${css.orangeColor}`}
                 onClick={() => {
                   dispatch(deleteFromOrder(item.id));
+                  dispatch(add(-1));
                 }}
               />
               <h4 className={css.orange}>{item.name}</h4>
@@ -36,7 +38,7 @@ const OrderSummary = () => {
           <CompletedGiftCard />
         </div>
       </div>
-      <Sum prices={menu} giftCard={cardPrice}/>
+      <Sum prices={menu} giftCard={cardPrice} />
     </div>
   );
 };

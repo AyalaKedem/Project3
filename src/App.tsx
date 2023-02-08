@@ -7,17 +7,17 @@ import Menu from "./routes/menu/Menu";
 import MenuItem from "./components/menu-item/MenuItem";
 import Footer from "./components/footer/Footer";
 import BranchSearch from "./components/branch-search/BranchSearch";
-import GiftCard from "./components/gift-card/GiftCard";
+// import GiftCard from "./components/gift-card/GiftCard";
 import EditCard from "./components/edit-card/EditCard";
 import OrderSummary from "./routes/order-summary/OrderSummary";
-import { Badge } from "react-bootstrap";
+import OrdersBadge from "./components/orders-badge/OrdersBadge";
 
 function App() {
   return (
     <div className="App">
       <MainNav />
-      <Badge />
-      <GiftCard />
+      <OrdersBadge/>
+      {/* <GiftCard /> */}
       <Routes>
         <Route path="/" element={<Menu />} />
         <Route path="/menu" element={<Menu />} />

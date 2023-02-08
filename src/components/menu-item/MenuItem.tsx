@@ -4,6 +4,7 @@ import BackBtn from "../backBtn/BackBtn";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { add } from "../../features/order/orderSlice";
+import { add as addCounter } from "../../features/counter/counterSlice";
 
 const MenuItem = () => {
   const { endpoint } = useParams();
@@ -20,6 +21,7 @@ const MenuItem = () => {
           <div
             onClick={() => {
               dispatch(add(item));
+              dispatch(addCounter(1));
             }}
             className={`text-end m-4 ${css.width}`}
             key={item.id}
@@ -29,7 +31,9 @@ const MenuItem = () => {
               {item.vegan && <RiLeafFill style={iconStyle} />}
               {item.vegetarian && <RiLeafLine style={iconStyle} />}
             </div>
+            {/* <div className={css.price}> */}
             <div className={item.ordered ? css.ordered2 : ""}>{item.price} ₪</div>
+            {/* </div> */}
             <p className={item.ordered ? css.ordered2 : ""}>{item.description}</p>
           </div>
         ))}

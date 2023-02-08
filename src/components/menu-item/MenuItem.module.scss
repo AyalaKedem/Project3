@@ -24,3 +24,12 @@ padding-left: 8px;
 .ordered2 {
     color: rgba(255, 255, 255, 0.5);
 }
+
+.price:before {
+    content: '';
+    position: absolute;
+    bottom: 0.2rem;
+    width: 100%;
+    height: 0;
+    border-bottom: 2px dotted;
+  }

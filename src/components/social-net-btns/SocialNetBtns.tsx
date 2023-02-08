@@ -1,9 +1,10 @@
 import { SocialNetArr } from "../../services/SocialNetArr"
 import SocialNetBtn from "../social-net-btn/SocialNetBtn"
+import css from './SocialNetBtns.module.scss'
 
 const SocialNetBtns = () => {
   return (
-    <div>
+    <div className={css.black}>
         {SocialNetArr.map(s => (
             <SocialNetBtn key={s.link} {...s}/>
         ))}
