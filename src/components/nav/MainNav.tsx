@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { navArr } from "../../services/nav-arr";
+import OrdersBadge from "../orders-badge/OrdersBadge";
 import css from './MainNav.module.scss';
 
 const MainNav = () => {
@@ -9,6 +10,8 @@ const MainNav = () => {
     {navArr.map((link) => (
       <NavLink className={e => e.isActive ? css.active : css.unActive} key={link.path} to={link.path}>{link.text}</NavLink>
   ))}
+  <NavLink className={e => e.isActive ? css.active : css.unActive} key='123' to='/order_summary'><OrdersBadge /></NavLink>
+  
   </div>
   )
 }

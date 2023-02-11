@@ -1,4 +1,6 @@
-import { BiDish } from 'react-icons/bi';
+// import { BiDish } from 'react-icons/bi';
+
+// TS - להחליף את הקובץ ל
 
 
 // nav - כן, אני רוצה שעמוד התפריט יהיה העמוד הראשי אבל יעמוד באמצע ב
@@ -16,8 +18,8 @@ export const navArr = [
     text: "סניפים",
     path: "/branches",
   },
-  {
-    text: <BiDish style={{fontSize: '22px'}} />,
-    path: '/order_summary'
-  }
+  // {
+  //   text: <BiDish style={{fontSize: '22px'}} />,
+  //   path: '/order_summary'
+  // }
 ];

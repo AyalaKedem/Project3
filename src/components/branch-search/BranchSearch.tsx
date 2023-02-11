@@ -21,7 +21,7 @@ const BranchSearch = () => {
   };
 
   return (
-    <div className="w-75 mx-auto">
+    <div className="w-50 mx-auto">
       <div className="d-flex align-items-center gap-3">
         <input className={`${css.input} w-75 pe-2`} onInput={onInput} type="text" placeholder="הקלד שם עיר" />
         <button className={`${css.btn} w-25 ps-5 pe-5`} onClick={onClick}>

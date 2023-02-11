@@ -10,13 +10,11 @@ import BranchSearch from "./components/branch-search/BranchSearch";
 // import GiftCard from "./components/gift-card/GiftCard";
 import EditCard from "./components/edit-card/EditCard";
 import OrderSummary from "./routes/order-summary/OrderSummary";
-import OrdersBadge from "./components/orders-badge/OrdersBadge";
 
 function App() {
   return (
     <div className="App">
       <MainNav />
-      <OrdersBadge/>
       {/* <GiftCard /> */}
       <Routes>
         <Route path="/" element={<Menu />} />

@@ -14,7 +14,7 @@ const MenuItem = () => {
   const title = useAppSelector((state) => state.mainMenu.mainMenu);
   const dispatch = useAppDispatch();
   return (
-    <>
+    <div className="w-75 mx-auto">
       <h3 className="display-5">{title.text}</h3>
       <div className="pt-3 d-flex flex-wrap justify-content-center">
         {specificMenu.map((item) => (
@@ -23,23 +23,23 @@ const MenuItem = () => {
               dispatch(add(item));
               dispatch(addCounter(1));
             }}
-            className={`text-end m-4 ${css.width}`}
+            className={`text-end m-4 ${css.width} ${css.pointer}`}
             key={item.id}
           >
-            <div className="d-flex align-items-center gap-2">
-              <h4 className={item.ordered ? css.ordered1 : css.orange}>{item.name}</h4>
-              {item.vegan && <RiLeafFill style={iconStyle} />}
-              {item.vegetarian && <RiLeafLine style={iconStyle} />}
+            <div className={css.item}>
+              <div className="d-flex align-items-center gap-2">
+                <h4 className={item.ordered ? css.ordered1 : css.orange}>{item.name}</h4>
+                {item.vegan && <RiLeafFill style={iconStyle} />}
+                {item.vegetarian && <RiLeafLine style={iconStyle} />}
+              </div>
+              <div className={item.ordered ? css.ordered2 : ""}>{item.price} ₪</div>
             </div>
-            {/* <div className={css.price}> */}
-            <div className={item.ordered ? css.ordered2 : ""}>{item.price} ₪</div>
-            {/* </div> */}
             <p className={item.ordered ? css.ordered2 : ""}>{item.description}</p>
           </div>
         ))}
       </div>
       <BackBtn />
-    </>
+    </div>
   );
 };
 

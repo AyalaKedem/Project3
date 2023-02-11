@@ -7,7 +7,7 @@ const Sum = ({ prices, giftCard }: SumProp) => {
   let sum = arr.reduce((a, b) => {
     return a + b;
   }, 0);
-  return <div>סה"כ לתשלום: {sum} ₪</div>;
+  return <div className="">סה"כ לתשלום: {sum} ₪</div>;
 };
 
 export default Sum;

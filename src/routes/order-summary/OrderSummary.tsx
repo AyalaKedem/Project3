@@ -7,6 +7,7 @@ import { deleteFromOrder } from "../../features/order/orderSlice";
 import Sum from "../../components/sum/Sum";
 import { v4 } from "uuid";
 import { add } from "../../features/counter/counterSlice";
+import ContinueBtn from "../../components/continueBtn/ContinueBtn";
 
 const OrderSummary = () => {
   const menu = useAppSelector((state) => state.orders.orders);
@@ -14,8 +15,11 @@ const OrderSummary = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <div className="">
+    <div className="w-75 mx-auto">
+      <div className="d-flex gap-5 align-items-baseline justify-content-center">
       <h3 className="display-5">סיכום הזמנה</h3>
+      <Sum prices={menu} giftCard={cardPrice} />
+      </div>
       <div className="pt-3 d-flex flex-wrap justify-content-center">
         {menu.map((item) => (
           <div onClick={() => {}} className={`text-end m-4 ${css.width}`} key={v4()}>
@@ -38,7 +42,7 @@ const OrderSummary = () => {
           <CompletedGiftCard />
         </div>
       </div>
-      <Sum prices={menu} giftCard={cardPrice} />
+      <ContinueBtn/>
     </div>
   );
 };
