@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { add } from "../../features/order/orderSlice";
 import { add as addCounter } from "../../features/counter/counterSlice";
+import GiftCard from "../gift-card/GiftCard";
 
 const MenuItem = () => {
   const { endpoint } = useParams();
@@ -15,6 +16,7 @@ const MenuItem = () => {
   const dispatch = useAppDispatch();
   return (
     <div className="w-75 mx-auto">
+      <GiftCard/>
       <h3 className="display-5">{title.text}</h3>
       <div className="pt-3 d-flex flex-wrap justify-content-center">
         {specificMenu.map((item) => (

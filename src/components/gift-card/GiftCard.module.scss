@@ -4,12 +4,32 @@
   background-color: $orange;
 }
 
+.dFlex {
+  background-color: $orange;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.giftBtn {
+  flex-direction: column;
+  width: 137px;
+  height: 137px;
+  border: solid 1.5px #fff;
+  transform: rotate(-10deg);
+  cursor: pointer;
+  &:hover {
+    color: #000;
+    border: solid 1.5px #000;
+  }
+}
+
 .orange {
   background-color: $orange;
   border-radius: $radius;
   color: #fff;
   font-size: 35px;
-//   text-shadow: .3px .3px 8px rgba(0, 0, 0, 0.391);
 }
 
 .x {
@@ -26,4 +46,15 @@
 
 .sumWidth {
   width: 50px;
+}
+
+.orangeBorder {
+  border: none;
+  width: 150px;
+  height: 150px;
+}
+
+.sticky {
+  position: absolute;
+  top: 5vh;
 }

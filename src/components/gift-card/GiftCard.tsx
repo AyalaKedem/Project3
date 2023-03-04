@@ -1,13 +1,14 @@
 import { useState } from "react";
 import Modal from "react-modal";
-import giftImg from "../../img/ekaterina-shevchenko-ZLTlHeKbh04-unsplash.jpg";
 import css from "./GiftCard.module.scss";
 import { AiOutlineCloseCircle } from "react-icons/ai";
-// import CompletedGiftCard from "../completed-gift-card/CompletedGiftCard";
 import { useAppDispatch } from "../../app/hooks";
 import { GiftCard as GiftCardType } from "../../@types";
 import { card } from "../../features/gift-card/giftCardSlice";
 import { v4 } from "uuid";
+import { HiStar } from "react-icons/hi";
+
+const giftImg = "https://github.com/AyalaKedem/project3images/blob/main/ekaterina-shevchenko-ZLTlHeKbh04-unsplash.jpg?raw=true";
 
 const customStyles = {
   content: {
@@ -42,10 +43,17 @@ const GiftCard = () => {
   const [from, setFrom] = useState("");
 
   return (
-    <div>
-      <button className={css.btn} onClick={openModal}>
-        Gift Card
-      </button>
+    <div className={css.sticky}>
+      <div onClick={openModal} className={`${css.orangeBorder} ${css.dFlex}`}>
+        <div className={`${css.giftBtn} ${css.dFlex}`}>
+          Gift Card
+          <div>
+            <HiStar />
+            <HiStar />
+            <HiStar />
+          </div>
+        </div>
+      </div>
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal">
         <AiOutlineCloseCircle className={css.x} onClick={closeModal} />
         <div className="d-flex justify-content-between mx-auto rounded-2">
@@ -59,27 +67,11 @@ const GiftCard = () => {
               </div>
               <div className="d-flex align-items-center gap-2">
                 <label htmlFor="to">ל: </label>
-                <input
-                
-                  className="pe-1 w-100"
-                  type="text"
-                  name="to"
-                  placeholder="שם מקבל/ת המתנה"
-                  onChange={(e) => setTo(e.currentTarget.value)}
-                />
+                <input className="pe-1 w-100" type="text" name="to" placeholder="שם מקבל/ת המתנה" onChange={(e) => setTo(e.currentTarget.value)} />
               </div>
               <div className="d-flex flex-column gap-1">
                 <label htmlFor="congratulation">ברכה:</label>
-                <textarea
-                
-                  className={`pe-2 w-100 ${css.textArea}`}
-                  name="congratulation"
-                  id="congratulation"
-                  cols={40}
-                  rows={5}
-                  placeholder="זה המקום להכניס ברכה..."
-                  onChange={(e) => setCongrat(e.currentTarget.value)}
-                ></textarea>
+                <textarea className={`pe-2 w-100 ${css.textArea}`} name="congratulation" id="congratulation" cols={40} rows={5} placeholder="זה המקום להכניס ברכה..." onChange={(e) => setCongrat(e.currentTarget.value)}></textarea>
               </div>
               <div className="d-flex gap-2 align-items-center">
                 <label htmlFor="from">באהבה:</label>

@@ -9,11 +9,10 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    border: none;
+    border: 1px solid #000;
     color: #000;
     margin: 20px;
     font-size: 18px;
-    z-index: 999;
     &:hover{
         color: $orange;
     }

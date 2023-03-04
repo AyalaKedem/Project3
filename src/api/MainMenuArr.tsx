@@ -1,58 +1,48 @@
-import pic1 from "../img/squareImages/pexels-rama-khandkar-21135561.jpg";
-import pic2 from "../img/squareImages/pexels-olena-islamkina-22269871.jpg";
-import pic3 from "../img/squareImages/pexels-rajesh-tp-16039011.jpg";
-import pic4 from "../img/squareImages/pexels-pixabay-3157551.jpg";
-import pic5 from '../img/squareImages/pexels-jay-abrantes-3438711.jpg'
-import pic6 from "../img/squareImages/pexels-valeria-boltneva-13322751.jpg";
-import pic7 from "../img/squareImages/pexels-jhon-marquez-23735201.jpg";
-import pic8 from "../img/squareImages/pexels-chevanon-photography-3028961.jpg";
-import pic9 from "../img/squareImages/pexels-archie-binamira-11933351.jpg";
-
 const MainMenuArr = [
   {
     text: "בוקר טוב",
     endpoint: "breakfast",
-    img: pic1,
+    img: 'https://github.com/AyalaKedem/project3images/blob/main/squareImages/pexels-rama-khandkar-21135561.jpg?raw=true',
   },
   {
     text: "ראשונות",
     endpoint: "starters",
-    img: pic2,
+    img: 'https://github.com/AyalaKedem/project3images/blob/main/squareImages/pexels-olena-islamkina-22269871.jpg?raw=true',
   },
   {
     text: "כריכים",
     endpoint: "sandwiches",
-    img: pic3,
+    img: 'https://github.com/AyalaKedem/project3images/blob/main/squareImages/pexels-rajesh-tp-16039011.jpg?raw=true',
   },
   {
     text: "מהמטבח האיטלקי",
     endpoint: "italian",
-    img: pic4,
+    img: 'https://github.com/AyalaKedem/project3images/blob/main/squareImages/pexels-pixabay-3157551.jpg?raw=true',
   },
   {
     text: "מהמטבח האסייאתי",
     endpoint: "asian",
-    img: pic5,
+    img: 'https://github.com/AyalaKedem/project3images/blob/main/squareImages/pexels-jay-abrantes-3438711.jpg?raw=true',
   },
   {
     text: "סלטים",
     endpoint: "salads",
-    img: pic6,
+    img: 'https://github.com/AyalaKedem/project3images/blob/main/squareImages/pexels-valeria-boltneva-13322751.jpg?raw=true',
   },
   {
     text: "קינוחים",
     endpoint: "desserts",
-    img: pic7,
+    img: 'https://github.com/AyalaKedem/project3images/blob/main/squareImages/pexels-jhon-marquez-23735201.jpg?raw=true',
   },
   {
     text: "קפה",
     endpoint: "coffee",
-    img: pic8,
+    img: 'https://github.com/AyalaKedem/project3images/blob/main/squareImages/pexels-chevanon-photography-3028961.jpg?raw=true',
   },
   {
     text: "שתיה קרה",
     endpoint: "softDrink",
-    img: pic9,
+    img: 'https://github.com/AyalaKedem/project3images/blob/main/squareImages/pexels-archie-binamira-11933351.jpg?raw=true',
   },
 ];
 
