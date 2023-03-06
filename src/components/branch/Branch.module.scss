@@ -1,7 +1,9 @@
 @import '../../themed-bootstrap.scss';
 
 .branch {
-    padding: 30px 50px;
+    @media (min-width:576px) {
+        padding: 30px 50px; 
+    }
     margin-top: 20px;
     // background-color: $orange;
     border-bottom: 1px groove #fff;
