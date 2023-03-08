@@ -7,6 +7,7 @@ import { GiftCard as GiftCardType } from "../../@types";
 import { card } from "../../features/gift-card/giftCardSlice";
 import { v4 } from "uuid";
 import { HiStar } from "react-icons/hi";
+import { add as addCounter } from "../../features/counter/counterSlice";
 
 const giftImg = "https://github.com/AyalaKedem/project3images/blob/main/ekaterina-shevchenko-ZLTlHeKbh04-unsplash.jpg?raw=true";
 
@@ -43,7 +44,7 @@ const GiftCard = () => {
   const [from, setFrom] = useState("");
 
   return (
-    <div className={css.sticky}>
+    <div>
       <div onClick={openModal} className={`${css.orangeBorder} ${css.dFlex}`}>
         <div className={`${css.giftBtn} ${css.dFlex}`}>
           Gift Card
@@ -56,8 +57,8 @@ const GiftCard = () => {
       </div>
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal">
         <AiOutlineCloseCircle className={css.x} onClick={closeModal} />
-        <div className="d-flex justify-content-between mx-auto rounded-2">
-          <div className="p-5 w-50 mx-auto d-flex flex-column justify-content-center">
+        <div className="d-sm-flex justify-content-center align-items-center rounded-2">
+          <div className="p-sm-5 p-1 d-flex flex-column justify-content-center">
             <h3 className={`mb-4 p-3 d-flex justify-content-center ${css.orange}`}>שובר מתנה</h3>
             <form className="d-flex flex-column p-1 gap-4">
               <div className="d-flex align-items-center gap-2">
@@ -79,10 +80,12 @@ const GiftCard = () => {
               </div>
             </form>
           </div>
-          <img className={`rounded-start ms-4 ${css.width}`} src={giftImg} alt="תמונת מתנה" />
+          <div className="d-flex justify-content-center">
+            <img className={`ms-sm-5 ${css.width}`} src={giftImg} alt="תמונת מתנה" />
+          </div>
         </div>
         <button
-          className={`${css.btn} d-flex mx-auto mt-5 w-25 align-items-center justify-content-center p-2`}
+          className={`${css.btn} d-flex mx-auto mt-3 mb-3  align-items-center justify-content-center px-5 py-2`}
           onClick={() => {
             const giftCard: GiftCardType = {
               id: v4(),
@@ -92,6 +95,7 @@ const GiftCard = () => {
               to: to,
             };
             dispatch(card(giftCard));
+            dispatch(addCounter(1));
             closeModal();
           }}
         >

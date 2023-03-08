@@ -23,6 +23,10 @@
     color: #000;
     border: solid 1.5px #000;
   }
+  @media (max-width:576px) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .orange {
@@ -41,7 +45,13 @@
 }
 
 .width {
-    width: 40%;
+    border-radius: $radius 0px 0px $radius;
+    @media (max-width:576px) {
+      width: 95%;
+      display: block;
+      margin-top: 15px;
+      border-radius: 0px 0px $radius $radius;
+    }
 }
 
 .sumWidth {
@@ -49,12 +59,15 @@
 }
 
 .orangeBorder {
+  position: fixed;
+  top: 5vh;
   border: none;
   width: 150px;
   height: 150px;
-}
-
-.sticky {
-  position: absolute;
-  top: 5vh;
+  @media (max-width:576px) {
+    width: 110px;
+    height: 110px;
+    top: 10vh;
+    right: 12vw;
+  }
 }

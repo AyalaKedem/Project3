@@ -6,7 +6,7 @@ import { IoIosClose } from "react-icons/io";
 import { deleteFromOrder } from "../../features/order/orderSlice";
 import Sum from "../../components/sum/Sum";
 import { v4 } from "uuid";
-import { add } from "../../features/counter/counterSlice";
+import { less } from "../../features/counter/counterSlice";
 import ContinueBtn from "../../components/continueBtn/ContinueBtn";
 
 const OrderSummary = () => {
@@ -29,7 +29,7 @@ const OrderSummary = () => {
                 className={`${css.x} ${css.orangeColor}`}
                 onClick={() => {
                   dispatch(deleteFromOrder(item.id));
-                  dispatch(add(-1));
+                  dispatch(less(1));
                 }}
               />
               <h4 className={css.orange}>{item.name}</h4>

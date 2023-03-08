@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { IoIosClose } from "react-icons/io";
 import { deleteCard } from "../../features/gift-card/giftCardSlice";
+import { less } from "../../features/counter/counterSlice";
 
 const CompletedGiftCard = () => {
   const cardsArr = useAppSelector((state) => state.giftCard.giftCard);
@@ -19,6 +20,7 @@ const CompletedGiftCard = () => {
             className={`${css.x} ${css2.white}`}
             onClick={() => {
               dispatch(deleteCard(card.id));
+              dispatch(less(1));
             }}
           />
           <div className="d-flex bg-white justify-content-between mx-auto rounded-2">

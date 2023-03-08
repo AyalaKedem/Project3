@@ -11,7 +11,7 @@ const Menu = () => {
   return (
     <div className="w-50 mx-auto">
       <GiftCard />
-      <div className={`w-100 mx-auto d-flex gap-3 justify-content-center pt-4 flex-wrap ${css.pb}`}>
+      <div className={`w-100 mx-auto d-flex gap-3 justify-content-center flex-wrap ${css.pb}`}>
         {categoryArr.map((sub) => (
           <MainMenuItem key={sub.endpoint} text={sub.text} img={sub.img} endpoint={sub.endpoint} />
         ))}

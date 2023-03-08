@@ -9,7 +9,7 @@ const aboutImg = 'https://github.com/AyalaKedem/project3images/blob/main/jason-l
 const About = () => {
   return (
     <>
-      <div className="w-75 mx-auto p-5 mt-1">
+      <div className="w-75 mx-auto px-5 pb-5">
         <div className="row gap-md-0 gap-5">
         {/* <div className="d-flex flex-column flex-xl-row justify-content-between gap-5"> */}
           <div className="col-md-8 col-12">
