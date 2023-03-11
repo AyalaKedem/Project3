@@ -36,6 +36,45 @@ const EditCard = () => {
   const [congrat, setCongrat] = useState(card?.congrat ?? "");
   const [from, setFrom] = useState(card?.from ?? "");
 
+  const [sumComment, setSumComment] = useState("");
+  const [toComment, setToComment] = useState("");
+  const [fromComment, setFromComment] = useState("");
+
+  const validate = () => {
+    if (sum < 30) {
+      setSum(30);
+      setSumComment('*מינימום 30 ש"ח');
+    } else {
+      setSumComment("");
+    }
+    if (to.length < 2) {
+      setToComment("*צריך להכיל 2 תווים או יותר");
+    } else {
+      setToComment("");
+    }
+    if (from.length < 2) {
+      setFromComment("*צריך להכיל 2 תווים או יותר");
+    } else {
+      setFromComment("");
+    }
+  };
+
+  const edit = () => {
+    if (sum >= 30 && to.length >= 2 && from.length >= 2) {
+      const editedCard: GiftCard = {
+        id: id!,
+        sum: sum,
+        congrat: congrat,
+        from: from,
+        to: to,
+      };
+      dispatch(editCard(editedCard));
+      navigate(-1);
+    } else {
+      validate();
+    }
+  };
+
   if (card === undefined) {
     // לשנות לדף 404 אם יש זמן
     return <Navigate to="/" />;
@@ -53,10 +92,12 @@ const EditCard = () => {
                 <input required className={css.sumWidth} type="number" min={0} name="sum" value={sum} onChange={(e) => setSum(+e.currentTarget.value)} />
                 <span>₪</span>
               </div>
+              <div className={css.mt}>{sumComment}</div>
               <div className="d-flex align-items-center gap-2">
                 <label htmlFor="to">ל: </label>
                 <input required value={to} className="pe-1 w-100" type="text" name="to" placeholder="שם מקבל/ת המתנה" onChange={(e) => setTo(e.currentTarget.value)} />
               </div>
+              <div className={css.mt}>{toComment}</div>
               <div className="d-flex flex-column gap-1">
                 <label htmlFor="congratulation">ברכה:</label>
                 <textarea
@@ -75,24 +116,12 @@ const EditCard = () => {
                 <label htmlFor="from">באהבה:</label>
                 <input required value={from} className="pe-1 w-100" type="text" name="from" onChange={(e) => setFrom(e.currentTarget.value)} />
               </div>
+              <div className={css.mt}>{fromComment}</div>
             </form>
           </div>
           <img className={`rounded-start ms-4 ${css.width}`} src={giftImg} alt="תמונת מתנה" />
         </div>
-        <button
-          className={`${css.btn} d-flex mx-auto mt-5 w-25 align-items-center justify-content-center p-2`}
-          onClick={() => {
-            const editedCard: GiftCard = {
-              id: id!,
-              sum: sum,
-              congrat: congrat,
-              from: from,
-              to: to,
-            };
-            dispatch(editCard(editedCard));
-            navigate(-1);
-          }}
-        >
+        <button className={`${css.btn} d-flex mx-auto mt-5 w-25 align-items-center justify-content-center p-2`} onClick={edit}>
           עדכן
         </button>
       </Modal>

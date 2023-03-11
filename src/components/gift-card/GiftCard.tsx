@@ -38,10 +38,50 @@ const GiftCard = () => {
     setIsOpen(false);
   };
 
-  const [sum, setSum] = useState(Number);
+  const [sum, setSum] = useState(30);
   const [to, setTo] = useState("");
   const [congrat, setCongrat] = useState("");
   const [from, setFrom] = useState("");
+
+  const [sumComment, setSumComment] = useState("");
+  const [toComment, setToComment] = useState("");
+  const [fromComment, setFromComment] = useState("");
+
+  const validate = () => {
+    if (sum < 30) {
+      setSum(30);
+      setSumComment('*מינימום 30 ש"ח');
+    } else {
+      setSumComment("");
+    }
+    if (to.length < 2) {
+      setToComment("*צריך להכיל 2 תווים או יותר");
+    } else {
+      setToComment("");
+    }
+    if (from.length < 2) {
+      setFromComment("*צריך להכיל 2 תווים או יותר");
+    } else {
+      setFromComment("");
+    }
+  };
+
+  const addGiftCard = () => {
+    if (sum >= 30 && to.length >= 2 && from.length >= 2) {
+      const giftCard: GiftCardType = {
+        id: v4(),
+        sum: sum,
+        congrat: congrat,
+        from: from,
+        to: to,
+      };
+      dispatch(card(giftCard));
+      dispatch(addCounter(1));
+      closeModal();
+    } else {
+      validate();
+    }
+  };
 
   return (
     <div>
@@ -63,13 +103,25 @@ const GiftCard = () => {
             <form className="d-flex flex-column p-1 gap-4">
               <div className="d-flex align-items-center gap-2">
                 <label htmlFor="sum">גיפט קארד</label>
-                <input className={css.sumWidth} type="number" min={0} name="sum" onChange={(e) => setSum(+e.currentTarget.value)} />
+                <input
+                  className={css.sumWidth}
+                  type="number"
+                  min={30}
+                  name="sum"
+                  value={sum}
+                  onChange={(e) => {
+                    setSum(+e.currentTarget.value);
+                    console.log(sum);
+                  }}
+                />
                 <span>₪</span>
               </div>
+              <div className={css.mt}>{sumComment}</div>
               <div className="d-flex align-items-center gap-2">
                 <label htmlFor="to">ל: </label>
                 <input className="pe-1 w-100" type="text" name="to" placeholder="שם מקבל/ת המתנה" onChange={(e) => setTo(e.currentTarget.value)} />
               </div>
+              <div className={css.mt}>{toComment}</div>
               <div className="d-flex flex-column gap-1">
                 <label htmlFor="congratulation">ברכה:</label>
                 <textarea className={`pe-2 w-100 ${css.textArea}`} name="congratulation" id="congratulation" cols={40} rows={5} placeholder="זה המקום להכניס ברכה..." onChange={(e) => setCongrat(e.currentTarget.value)}></textarea>
@@ -78,6 +130,7 @@ const GiftCard = () => {
                 <label htmlFor="from">באהבה:</label>
                 <input className="pe-1 w-100" type="text" name="from" onChange={(e) => setFrom(e.currentTarget.value)} />
               </div>
+              <div className={css.mt}>{fromComment}</div>
             </form>
           </div>
           <div className="d-flex justify-content-center">
@@ -87,16 +140,7 @@ const GiftCard = () => {
         <button
           className={`${css.btn} d-flex mx-auto mt-3 mb-3  align-items-center justify-content-center px-5 py-2`}
           onClick={() => {
-            const giftCard: GiftCardType = {
-              id: v4(),
-              sum: sum,
-              congrat: congrat,
-              from: from,
-              to: to,
-            };
-            dispatch(card(giftCard));
-            dispatch(addCounter(1));
-            closeModal();
+            addGiftCard();
           }}
         >
           הוסף להזמנה
@@ -107,31 +151,3 @@ const GiftCard = () => {
 };
 
 export default GiftCard;
-
-//
-//   return (
-// <div className='d-flex justify-content-between w-50 mx-auto rounded-2'>
-//     <div className="p-5 w-50 mx-auto d-flex flex-column justify-content-center">
-//   <h3>שובר מתנה</h3>
-//   <form className="d-flex flex-column gap-3">
-//     <div className="d-flex gap-2">
-//       <label htmlFor="to">ל: </label>
-//       <input className="pe-1" type="text" name="to" placeholder="שם מקבל/ת המתנה" />
-//     </div>
-//     <div className="d-flex gap-2">
-//       <label htmlFor="congratulation">ברכה:</label>
-//       {/* לעשות שלא יהיה אפשר להזיז */}
-//       <textarea className="pe-2" name="congratulation" id="congratulation" cols={40} rows={5} placeholder="זה המקום להכניס ברכה..."></textarea>
-//     </div>
-//     <div className="d-flex gap-2">
-//       <label htmlFor="from">באהבה:</label>
-//       <input className="pe-1" type="text" name="from" />
-//     </div>
-//   </form>
-// </div>
-// <img className='rounded-start' src={giftImg} alt="תמונת מתנה" />
-// </div>
-//   );
-// }
-
-// export default GiftCard;
