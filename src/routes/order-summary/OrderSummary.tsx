@@ -16,9 +16,9 @@ const OrderSummary = () => {
 
   return (
     <div className="w-75 mx-auto">
-      <div className="d-flex gap-5 align-items-baseline justify-content-center">
-      <h3 className="display-5">סיכום הזמנה</h3>
-      <Sum prices={menu} giftCard={cardPrice} />
+      <div className="d-sm-flex gap-5 align-items-baseline justify-content-center">
+        <h3 className="display-5">סיכום הזמנה</h3>
+        <Sum prices={menu} giftCard={cardPrice} />
       </div>
       <div className="pt-3 d-flex flex-wrap justify-content-center">
         {menu.map((item) => (
@@ -42,7 +42,7 @@ const OrderSummary = () => {
           <CompletedGiftCard />
         </div>
       </div>
-      <ContinueBtn/>
+      <ContinueBtn />
     </div>
   );
 };

@@ -23,9 +23,9 @@ const CompletedGiftCard = () => {
               dispatch(less(1));
             }}
           />
-          <div className="d-flex bg-white justify-content-between mx-auto rounded-2">
-            <div className="p-5 w-50 mx-auto d-flex flex-column justify-content-center">
-              <h3 className={`mb-1 p-3 d-flex justify-content-center ${css.orange}`}>שובר מתנה</h3>
+          <div className="d-sm-flex bg-white justify-content-center align-items-center mx-auto rounded-2">
+            <div className="p-sm-5 p-1 w-75 mx-auto d-flex flex-column justify-content-center">
+              <h3 className={`mb-4 mt-sm-0 mt-4 p-3 d-flex justify-content-center ${css.orange}`}>שובר מתנה</h3>
               <form className="d-flex flex-column p-1 gap-4">
                 <div className="text-black fw-bold">גיפט קארד - {card.sum} ₪</div>
                 <div className="d-flex align-items-center gap-2">
@@ -40,7 +40,7 @@ const CompletedGiftCard = () => {
               </form>
             </div>
             <div className={`${css2.grid} ${css2.wrapImg}`}>
-              <img className={`rounded-start ${css2.grid}`} src={giftImg} alt="תמונת מתנה" />
+              <img className={`${css2.width} ${css2.grid}`} src={giftImg} alt="תמונת מתנה" />
               <MdEditNote
                 onClick={() => {
                   navigate(`/giftcard/${card.id}`);

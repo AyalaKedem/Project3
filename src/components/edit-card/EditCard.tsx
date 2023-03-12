@@ -83,8 +83,8 @@ const EditCard = () => {
   return (
     <div>
       <Modal isOpen={modalIsOpen} style={customStyles} contentLabel="Example Modal">
-        <div className="d-flex justify-content-between mx-auto rounded-2">
-          <div className="p-5 w-50 mx-auto d-flex flex-column justify-content-center">
+        <div className="d-sm-flex justify-content-center align-items-center rounded-2">
+          <div className="p-sm-5 p-1 d-flex flex-column justify-content-center">
             <h3 className={`mb-4 p-3 d-flex justify-content-center ${css.orange}`}>שובר מתנה</h3>
             <form className="d-flex flex-column p-1 gap-4">
               <div className="d-flex align-items-center gap-2">
@@ -119,9 +119,9 @@ const EditCard = () => {
               <div className={css.mt}>{fromComment}</div>
             </form>
           </div>
-          <img className={`rounded-start ms-4 ${css.width}`} src={giftImg} alt="תמונת מתנה" />
+          <img className={`ms-sm-5 ${css.width}`} src={giftImg} alt="תמונת מתנה" />
         </div>
-        <button className={`${css.btn} d-flex mx-auto mt-5 w-25 align-items-center justify-content-center p-2`} onClick={edit}>
+        <button className={`${css.btn} d-flex mx-auto mt-3 mb-3  align-items-center justify-content-center px-5 py-2`} onClick={edit}>
           עדכן
         </button>
       </Modal>

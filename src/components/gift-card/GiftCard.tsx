@@ -111,7 +111,6 @@ const GiftCard = () => {
                   value={sum}
                   onChange={(e) => {
                     setSum(+e.currentTarget.value);
-                    console.log(sum);
                   }}
                 />
                 <span>₪</span>
@@ -137,12 +136,7 @@ const GiftCard = () => {
             <img className={`ms-sm-5 ${css.width}`} src={giftImg} alt="תמונת מתנה" />
           </div>
         </div>
-        <button
-          className={`${css.btn} d-flex mx-auto mt-3 mb-3  align-items-center justify-content-center px-5 py-2`}
-          onClick={() => {
-            addGiftCard();
-          }}
-        >
+        <button className={`${css.btn} d-flex mx-auto mt-3 mb-3  align-items-center justify-content-center px-5 py-2`} onClick={addGiftCard}>
           הוסף להזמנה
         </button>
       </Modal>
