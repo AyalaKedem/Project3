@@ -1,4 +1,5 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { checkBoxReducer } from "../features/check-box/checkBoxSlice";
 import { counterReducer } from "../features/counter/counterSlice";
 import { giftCardReducer } from "../features/gift-card/giftCardSlice";
 import { mainMenuReducer } from "../features/main-menu/mainMenuSlice";
@@ -12,6 +13,7 @@ export const store = configureStore({
     giftCard: giftCardReducer,
     orders: orderReducer,
     counter: counterReducer,
+    checkBox: checkBoxReducer
   },
 });
 

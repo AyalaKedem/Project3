@@ -31,3 +31,19 @@
   align-items: center;
   padding-left: 20px;
 }
+
+.filter {
+  background-color: #000;
+  // height: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  text-decoration: underline;
+  &:hover {
+    border: none;
+    color: $orange;
+  }
+}
