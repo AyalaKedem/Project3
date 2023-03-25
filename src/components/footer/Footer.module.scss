@@ -1,6 +1,18 @@
+@import "../../themed-bootstrap.scss";
+
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+}
+
+.name a {
+  line-height: 4;
+  color: #fff;
+  text-decoration: none;
+  direction: ltr;
+  &:hover {
+    color: $orange;
+  }
 }
