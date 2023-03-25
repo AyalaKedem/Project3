@@ -7,7 +7,6 @@ const Footer = () => {
     <>
       <div className={css.footer}>
         <SocialNetBtns />
-          {/* <div className={`bg-black ${css.lh}`}>{`© Ayala Kedem - ${new Date().getFullYear()}`}</div> */}
           <div className={`bg-black ${css.name}`}>
             <a target={"_blank"} rel="_blank noreferrer" href={linkedin}>{`Ayala Kedem - ${new Date().getFullYear()} ©`}</a>
           </div>
