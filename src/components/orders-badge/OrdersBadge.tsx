@@ -1,6 +1,5 @@
 import { BiDish } from "react-icons/bi";
 import { Badge } from "react-bootstrap";
-// import { Badge } from '@material-ui/core/Badge';
 import { useAppSelector } from "../../app/hooks";
 import css from "./OrderBadge.module.scss";
 

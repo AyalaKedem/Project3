@@ -1,10 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { GiftCard } from "../../@types";
-
-// להעביר אותו לטייפים בסןף ולייבא כאן
-type initialStateGift = {
-  giftCard: GiftCard[];
-};
+import { GiftCard, initialStateGift } from "../../@types";
 
 const initialState: initialStateGift = {
   giftCard: [],

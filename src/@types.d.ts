@@ -26,7 +26,6 @@ type CategoryItem = {
   ordered: boolean;
 };
 
-// קשור רק למערך המקורי
 export type MenuItemProp = {
   breakfast: categoryItem[];
   starters: categoryItem[];
@@ -56,6 +55,18 @@ export type GiftCard = {
   to: string;
   congrat: string;
   from: string;
+};
+
+type initialStateGift = {
+  giftCard: GiftCard[];
+};
+
+type initialStateMain = {
+  mainMenu: MainMenuProp;
+};
+
+type InitialStateType = {
+  menuCategory: CategoryItem[];
 };
 
 export type SumProp = { prices: CategoryItem[], giftCard:GiftCard[] };

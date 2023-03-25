@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { CategoryItem } from "../../@types";
 
-// יכול להיות שכדאי למחוק את כל הקובץ הזה, בינתיים לא השתמשי בו
 type initialStateOrder = {
   orders: CategoryItem[];
 };

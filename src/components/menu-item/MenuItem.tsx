@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { add } from "../../features/order/orderSlice";
 import { add as addCounter } from "../../features/counter/counterSlice";
-import GiftCard from "../gift-card/GiftCard";
 import Checkbox from "../checkbox/Checkbox";
 import { useState } from "react";
 
@@ -42,7 +41,6 @@ const MenuItem = () => {
 
   return (
     <div className="w-75 mx-auto">
-      <GiftCard />
       <h3 className="display-5">{title.text}</h3>
       <div className="d-flex justify-content-center align-items-center gap-0">
         <Checkbox />
