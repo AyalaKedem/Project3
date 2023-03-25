@@ -13,13 +13,8 @@ const giftImg = "https://github.com/AyalaKedem/project3images/blob/main/ekaterin
 
 const customStyles = {
   content: {
-    width: "55%",
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
+    width: '80vw',
+    margin: 'auto',
   },
 };
 
