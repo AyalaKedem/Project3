@@ -9,11 +9,13 @@ import Footer from "./components/footer/Footer";
 import BranchSearch from "./components/branch-search/BranchSearch";
 import EditCard from "./components/edit-card/EditCard";
 import OrderSummary from "./routes/order-summary/OrderSummary";
+import Up from "./components/up/Up";
 
 function App() {
   return (
     <div className="App">
       <MainNav />
+      <Up/>
       <Routes>
         <Route path="/" element={<Menu />} />
         <Route path="/menu" element={<Menu />} />

@@ -1,0 +1,25 @@
+@import "../../themed-bootstrap.scss";
+
+.topToBtm {
+  position: relative;
+}
+
+.iconPosition {
+  position: fixed;
+  bottom: 4vh;
+  right: 5vw;
+  z-index: 20;
+}
+
+.iconStyle {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  color: $orange;
+  cursor: pointer;
+}
+
+.iconStyle:hover {
+  animation: none;
+  color: #fff;
+}
